@@ -1,7 +1,8 @@
-*
-.*
-!package.json
-!package-lock.json
-!README.md
-!.npmignore
-!dist
+.vscode
+example
+node_modules
+src
+package
+jest.config.js
+tsconfig.json
+*.tgz
