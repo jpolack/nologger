@@ -1,7 +1,18 @@
 {
   "name": "notalogger",
-  "version": "1.0.8",
-  "description": "",
+  "version": "1.0.9",
+  "description": "A logger that is super extensible by middlewares. Does not log by default.",
+  "keywords": [
+    "logger",
+    "middleware",
+    "node",
+    "nodejs",
+    "typescript",
+    "es6",
+    "logging",
+    "extend",
+    "plugin"
+  ],
   "main": "dist/logger.js",
   "types": "dist/types",
   "scripts": {
