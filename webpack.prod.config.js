@@ -1,7 +1,5 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-var DeclarationBundlerPlugin = require('declaration-bundler-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -22,10 +20,6 @@ module.exports = {
                 use: [
                     {
                         loader: 'ts-loader',
-                        options: {
-                            transpileOnly: true,
-                            configFile: 'tsconfig.json',
-                        },
                     },
                 ],
             },
@@ -35,11 +29,6 @@ module.exports = {
         extensions: ['.ts', '.js'],
     },
     plugins: [
-        new ForkTsCheckerWebpackPlugin({
-            tsconfig: path.join(__dirname, 'tsconfig.json'),
-            useTypescriptIncrementalApi: true,
-            async: false,
-        }),
         new CleanWebpackPlugin(),
     ],
 };

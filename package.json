@@ -5,8 +5,9 @@
   "main": "dist/logger.js",
   "types": "dist/logger.d.ts",
   "scripts": {
-    "build": "webpack -p",
-    "start": "npm run build && node ./example",
+    "build_dev": "webpack -p",
+    "build_prod": "webpack -p --config ./webpack.prod.config.js",
+    "start": "npm run build_dev && node ./example",
     "test": "npm run lint && npm run jest",
     "jest": "jest",
     "lint": "eslint --ext .js,.ts ./"
