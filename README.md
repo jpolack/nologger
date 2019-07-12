@@ -103,7 +103,7 @@ import logger, { predefined } from 'notalogger';
 logger.extend.addMiddleware(predefined.consoleDefault)
 logger.extend.addMiddleware(predefined.prefixer('This is a prefix:'))
 
-logger.info("info") // Logs: ""
+logger.info("info") // Does not log anything
 ```
 
 ## Writing your own middlewares
