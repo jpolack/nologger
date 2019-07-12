@@ -1,4 +1,4 @@
-import { Logger, Level, Middleware, Messages } from "./types"
+import { Logger, Level, Middleware, Nextfunction } from "./types"
 
 export const levelWeight = {
     'TRACE': 10,
@@ -8,7 +8,7 @@ export const levelWeight = {
     'ERROR': 50
 }
 
-const nextFactory = (middlewares, index): ((loglevel: Level, messages: Messages) => void) => {
+const nextFactory = (middlewares, index): Nextfunction => {
     if (index >= middlewares.length || !middlewares[index]) {
         return (): void => { }
     }

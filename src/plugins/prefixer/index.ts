@@ -8,6 +8,4 @@ const factory = (prefix): Middleware => {
     return plugin
 }
 
-
-
 export default factory

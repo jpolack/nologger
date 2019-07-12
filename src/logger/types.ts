@@ -8,7 +8,8 @@ export enum Level {
 
 export type Messages = any[] // eslint-disable-line @typescript-eslint/no-explicit-any
 
-export type Middleware = (loglevel: Level, messages: Messages, next: Middleware) => void
+export type Nextfunction = (loglevel: Level, messages: Messages) => void
+export type Middleware = (loglevel: Level, messages: Messages, next: Nextfunction) => void
 
 export type Logfunction = (...messages: Messages) => void
 

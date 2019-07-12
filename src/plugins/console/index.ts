@@ -1,7 +1,7 @@
-import { Level } from "../../logger/types";
+import { Level, Middleware } from "../../logger/types";
 
-export default (loglevel, messages, next): void => {
-    switch(loglevel){
+const consoleMiddleware: Middleware= (loglevel, messages, next): void => {
+    switch (loglevel) {
         case Level.TRACE:
             console.trace(...messages)
             break;
@@ -22,3 +22,5 @@ export default (loglevel, messages, next): void => {
     }
     next(loglevel, messages)
 }
+
+export default consoleMiddleware
