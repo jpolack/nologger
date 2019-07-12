@@ -1,8 +1,9 @@
 {
   "name": "notalogger",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/logger.js",
+  "types": "dist/logger.d.ts",
   "scripts": {
     "build": "webpack -p",
     "start": "npm run build && node ./example",
