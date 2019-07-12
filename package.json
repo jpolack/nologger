@@ -27,7 +27,7 @@
     "type": "git",
     "url": "git+https://github.com/jpolack/nologger.git"
   },
-  "author": "",
+  "author": "Jonah Polack",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jpolack/nologger/issues"
