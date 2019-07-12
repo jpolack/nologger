@@ -1,5 +1,6 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+var DeclarationBundlerPlugin = require('declaration-bundler-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
@@ -40,5 +41,9 @@ module.exports = {
             async: false,
         }),
         new CleanWebpackPlugin(),
+        new DeclarationBundlerPlugin({
+            moduleName: 'notalogger',
+            out: './logger.d.ts',
+        })
     ],
 };
