@@ -2,7 +2,7 @@
   "name": "notalogger",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/logger.js",
   "scripts": {
     "build": "webpack -p",
     "start": "npm run build && node ./example",
